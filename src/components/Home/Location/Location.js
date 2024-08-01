@@ -1,8 +1,28 @@
 import React from 'react'
-import { location } from '../../Data/data'
-import Heading from '../../Common/Heading'
+
+import Heading from '../../Common/Heading';
+import { useState, useEffect } from "react";
 import './location.css'
 const Location=()=>{
+
+    const [location, setLocation] = useState([]);
+
+    useEffect( () => {
+        getLocation()
+    },[]);
+
+    async function getLocation() {
+        const url = 'http://localhost:5000/location'
+        const options = {
+            method: 'GET'
+        }
+        const response = await fetch(url, options)
+        const data = await response.json()
+        console.log("DATA", data)
+        if (response.ok === true) {
+            setLocation(data)
+        }
+    }
     return(
         <>
         <section className="location padding">

@@ -1,6 +1,6 @@
 
 import React from "react"
-// import { list } from "../../Data/data"
+
 import { useState, useEffect } from "react";
 
 const RecentCard = () => {
