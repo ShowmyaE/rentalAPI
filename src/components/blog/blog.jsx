@@ -1,7 +1,7 @@
 import React from "react"
 import Back from "../Common/Back"
 import RecentCard from "../Home/Recent/RecentCard"
-import "../Home/Recent/recent.css"
+import "../Home/Recent/Recent.css"
 // import img from "../images/about.jpg"
 
 const Blog = () => {
